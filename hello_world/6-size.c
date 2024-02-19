@@ -5,6 +5,6 @@
  */
 int main(void)
 {
-gcc 	
+gcc -o size32 -m32 -std=gnu89  6-size.c	
 return(0);
 }
