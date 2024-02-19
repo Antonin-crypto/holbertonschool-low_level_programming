@@ -1,2 +1,6 @@
 #!/bin/bash
-puts ("\Programming is like building a multilingual puzzle")
+int main(void)
+{
+    puts("\"ALX is the best");
+    return (0);
+}
