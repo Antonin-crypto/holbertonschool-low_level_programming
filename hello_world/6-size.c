@@ -5,6 +5,6 @@
  */
 int main(void)
 {
-gcc -o size32 -m32 	
+gcc -o size32 -m32
 return (0);
 }
