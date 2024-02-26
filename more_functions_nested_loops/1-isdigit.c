@@ -1,15 +1,19 @@
 #include "main.h"
+
 /**
- * _isdigit- checks for alphabetic character
- *@c: character to be verified
- *Return: return 0 or 1
+ * _isdigit - check if c is a digit
+ * @c: integer param
+ * Return: 1 if is ok, 0 if false
  */
+
 int _isdigit(int c)
 {
-if (c >= '0' && c <= '9')
-{
-	return 1;
-} else {
-        return 0;
-    }
+	int n;
+
+	if (c >= 48 && c <= 57)
+		n = 1;
+	if (!(c >= 48 && c <= 57))
+		n = 0;
+
+	return (n);
 }
