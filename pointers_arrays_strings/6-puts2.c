@@ -6,12 +6,14 @@
  * @str: string use
  * Return: void
  */
+
 void puts2(char *str)
 {
-	int x;
+	int i;
 
-	for (x = 0; x < 10; x++)
-	if (!(x == 1 || x == 3 || x == 5 || x == 7 || x == 9))
-	_putchar(str[0 + x]);
+	for (i = 0; i < _strlen(str); i += 2)
+	{
+		_putchar(str[i]);
+	}
 	_putchar('\n');
 }
