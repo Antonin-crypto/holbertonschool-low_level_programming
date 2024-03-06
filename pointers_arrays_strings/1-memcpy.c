@@ -7,6 +7,7 @@
  * @n: n bytes of memory pointed
  * Return: pointer to the memory dest
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
     char *p = dest;
