@@ -1,49 +1,38 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <string.h>
-
 /**
- * new_dog - create a new file for dog with name, age and owner
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of a dog
- * Return: dog_t
- */
+  * new_dog - creates a new struct of type dog
+  * @name: struct parameter name
+  * @age: struct parameter age
+  * @owner: struct parameter owner
+  * Return: returns pointer to buffer of datatype dog
+  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *copy_dog;
-	int length_name = 0, length_owner = 0;
+	int nlen, olen, i;
+	dog_t *doggy;
 
-	if (name != NULL && owner != NULL)
-	{
-		length_name = strlen(name) + 1;
-		length_owner = strlen(owner) + 1;
-		copy_dog = malloc(sizeof(dog_t));
+	nlen = olen = 0;
+	while (name[nlen++])
+		;
+	while (owner[olen++])
+		;
+	doggy = malloc(sizeof(dog_t));
+	if (doggy == NULL)
+		return (NULL);
 
-		if (copy_dog == NULL)
-			return (NULL);
+	doggy->name = malloc(nlen * sizeof(doggy->name));
+	if (doggy == NULL)
+		return (NULL);
+	for (i = 0; i < nlen; i++)
+		doggy->name[i] = name[i];
 
-		copy_dog->name = malloc(sizeof(char) * length_name);
+	doggy->age = age;
 
-			if (copy_dog->name == NULL)
-			{
-				free(copy_dog);
-				return (NULL);
-			}
-
-		copy_dog->owner = malloc(sizeof(char) * length_owner);
-
-		if (copy_dog->owner == NULL)
-		{
-			free(copy_dog->name);
-			free(copy_dog);
-			return (NULL);
-		}
-
-		copy_dog->name = strcpy(copy_dog->name, name);
-		copy_dog->age = age;
-		copy_dog->owner = strcpy(copy_dog->owner, owner);
-	}
-
-	return (copy_dog);
+	doggy->owner = malloc(olen * sizeof(doggy->owner));
+	if (doggy == NULL)
+		return (NULL);
+	for (i = 0; i < olen; i++)
+		doggy->owner[i] = owner[i];
+	return (doggy);
 }
