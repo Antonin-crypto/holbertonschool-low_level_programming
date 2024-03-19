@@ -1,6 +1,4 @@
 #include <stdlib.h>
-
-
 /**
  * print_name - a function prints a name
  * @name: nome of function
