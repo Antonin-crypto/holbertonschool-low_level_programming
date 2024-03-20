@@ -73,9 +73,10 @@ void print_all(const char * const format, ...)
 				form[second].func(ap);
 				separator = ", ";
 			}
-			second++;
+			++second;
 		}
-		first++;
+	second = 0;
+		++first;
 	}
 	printf("\n");
 	va_end(ap);
