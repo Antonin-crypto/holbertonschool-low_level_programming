@@ -19,7 +19,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (0);
 
 	/*Assign length of the string to the 'len' member of the new node*/
-	while (*ptr != '\0') 
+	while (*ptr != '\0')
 	{
 		len++;
 		ptr++;
