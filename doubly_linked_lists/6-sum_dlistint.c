@@ -7,7 +7,7 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
+	int sum = 0;
 	const dlistint_t *p = head;
 
 	while (p != NULL)
