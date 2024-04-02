@@ -1,10 +1,9 @@
 #include "lists.h"
-
 /**
- *list_len - Show the number of elements of a list
- *@h: A linked list
+ * dlistint_len - sized a list
  *
- * Return: the number of elements of a list
+ * @h: elements
+ * Return: size of list
  */
 size_t dlistint_len(const dlistint_t *h)
 {
