@@ -8,6 +8,9 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
+	size_t len = 0;
+	const char *ptr = str;
+
 	/*Allocate memory for a new node*/
 	list_t *new_list = (struct lists *) malloc(sizeof(struct lists));
 	list_t *last = *head;
@@ -16,8 +19,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (head == NULL || new_list == NULL)
 		return (0);
 
+	while (*ptr != '\0')
+	{
+		len++;
+		ptr++;
+	}
 	/*Assign the length of the string to the 'len' of the new node*/
-	new_list->len = strlen(str);
+	new_list->len = len;
 	/*Dupli the input string and assign it to 'str' of the new node*/
 	new_list->str = strdup(str);
 	/* Set the next node of the new node as NULL*/
