@@ -9,6 +9,8 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
+	size_t len = 0;
+	const char *ptr = str;
 	/*Allocate memory for a new list node*/
 	list_t *new_list = (struct lists *) malloc(sizeof(struct lists));
 
@@ -17,7 +19,12 @@ list_t *add_node(list_t **head, const char *str)
 		return (0);
 
 	/*Assign length of the string to the 'len' member of the new node*/
-	new_list->len = strlen(str);
+	while (*ptr != '\0') 
+	{
+		len++;
+		ptr++;
+	}
+	new_list->len = len;
 	/*Dupli the input string and assign it to the 'str' member of the new node*/
 	new_list->str = strdup(str);
 	/*Make the new node point to the current head of the list*/
