@@ -1,5 +1,5 @@
 ## C - Bit manipulation
-<img src = https://github.com/Antonin-crypto/holbertonschool-low_level_programming/blob/main/bit_manipulation/Capture%20d'écran%202024-04-11%20141355.png >
+<img src ="https://github.com/Antonin-crypto/holbertonschool-low_level_programming/blob/main/bit_manipulation/Capture%20d'écran%202024-04-11%20141355.png">
 
 ## Resources
 # Read or watch:
