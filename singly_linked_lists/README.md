@@ -30,7 +30,7 @@ Don’t forget to push your header file
 All your header files should be include guarded
 ## More Info
 Please use this data structure for this project:
-```
+```c
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
